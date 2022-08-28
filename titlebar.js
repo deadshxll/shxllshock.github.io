@@ -1,3 +1,19 @@
+let titleList = ["# whoami", "root"]
 
-eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 2=["# b","c"]5 i=0;d(e(){f.g=2[i];i=(i+1)%2.h},j);6 7=k(\'l://m.n/o/p\').3(8=>8.q({r:"s"}))7.3(9=>9.t()).3(a=>{6 4=a.4 u.v(4)})',32,32,'||titleList|then|visitorId|let|const|fpPromise|FingerprintJS|fp|result|whoami|root|setInterval|function|document|title|length||1500|import|https|fpcdn|io|v3|ueWCpm0TbdVSl9tbxPAq|load|region|eu|get|console|log'.split('|'),0,{}))
-// Website under construction
+let i = 0;
+setInterval(function () {
+    document.title = titleList[i];
+    i = (i + 1) % titleList.length;
+}, 1500);
+
+const fpPromise = import('https://fpcdn.io/v3/ueWCpm0TbdVSl9tbxPAq')
+    .then(FingerprintJS => FingerprintJS.load({
+    region: "eu"
+}))
+
+fpPromise.then(fp => fp.get()).then(result => {
+        const visitorId = result.visitorId
+        console.log(visitorId)
+})
+
+// http://dean.edwards.name/packer/
